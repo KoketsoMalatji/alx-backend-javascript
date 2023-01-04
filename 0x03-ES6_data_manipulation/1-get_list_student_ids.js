@@ -1,7 +1,6 @@
-xport default function getStudentsByLocation(students, city) {
-  // check arg is an array before using filter
-  if (Object.getPrototypeOf(students) === Array.prototype) {
-    return students.filter((items) => items.location === city);
+export default function getListStudentIds(bjs) {
+  if (Array.isArray(bjs) === false) {
+    return [];
   }
-  return [];
+  return bjs.map((y) => y.id);
 }
